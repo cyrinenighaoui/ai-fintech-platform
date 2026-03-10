@@ -1,0 +1,13 @@
+package com.fintech.ai_fintech_platform.dto;
+
+public class ChatRequest {
+    private String userMessage;
+
+    public String getUserMessage() {
+        return userMessage;
+    }
+
+    public void setUserMessage(String userMessage) {
+        this.userMessage = userMessage;
+    }
+}

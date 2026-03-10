@@ -1,5 +1,4 @@
-package com.fintech.ai_fintech_platform.finance.news;
-
+package com.fintech.ai_fintech_platform.ai;
 import com.fintech.ai_fintech_platform.config.OpenAIConfig;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;

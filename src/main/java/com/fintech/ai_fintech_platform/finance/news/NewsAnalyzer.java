@@ -4,6 +4,8 @@ import com.fintech.ai_fintech_platform.dto.AnalysisResponse;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Component;
+import com.fintech.ai_fintech_platform.ai.AIClient;
+
 @Component
 public class NewsAnalyzer {
 
