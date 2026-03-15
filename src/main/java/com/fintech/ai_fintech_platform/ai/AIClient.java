@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.*;
 
+
 import java.util.Map;
 
 @Component
@@ -35,6 +36,26 @@ public class AIClient {
 
         ResponseEntity<String> response =
                 restTemplate.postForEntity(url, request, String.class);
+
+        return response.getBody();
+    }
+
+        public String callEmbeddingAPI(String requestBody) {
+
+        String url = "https://api.openai.com/v1/embeddings";
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.setBearerAuth(apiKey);
+
+        HttpEntity<String> entity = new HttpEntity<>(requestBody, headers);
+
+        ResponseEntity<String> response = restTemplate.exchange(
+                url,
+                HttpMethod.POST,
+                entity,
+                String.class
+        );
 
         return response.getBody();
     }
